@@ -1,0 +1,90 @@
+/* src/pages/Login.css */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #f0f0f0; /* Fondo gris claro */
+  }
+  
+  /* Hacer que el formulario esté alineado al centro de la pantalla */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centramos los elementos horizontalmente */
+    justify-content: center; /* Centramos los elementos verticalmente */
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  /* Contenedor de cada campo input con label flotante */
+  .input-container {
+    position: relative;
+    width: 80%; /* Asegurarse de que los inputs llenen el formulario */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo del input */
+  input {
+    width:90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    outline: none;
+    z-index: 1;
+  }
+  
+/* Estilo de las etiquetas flotantes */
+label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-in-out;
+    color: #999;
+    pointer-events: none;
+    z-index: 0;
+    text-align: center; /* Centrar el texto horizontalmente */
+  }
+  
+ /* Cuando el input está lleno, la etiqueta flota arriba */
+input:focus + label,
+.filled {
+  top: -20px; /* La etiqueta flota hacia arriba */
+  left: 50%;  /* Centrado horizontalmente */
+  transform: translate(-50%, 0); /* Alinea horizontalmente al centro sin modificar el eje vertical */
+  font-size: 12px;
+  color: #007bff;
+  transition: all 0.2s ease-in-out; /* Añadir transición si no estaba */
+}
+
+  
+  /* Estilo del botón */
+  button {
+    width: 100%; /* Hacer que el botón llene el ancho del formulario */
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Espacio adicional entre los inputs y el botón */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Alinear el título al centro */
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
